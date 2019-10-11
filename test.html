@@ -1,0 +1,383 @@
+<p>Resolving Imports and modules in Python</p> 
+
+<!--
+**************************************************************
+* 9/16/2019, 1:04:42 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:04:42 PM</p>
+<p class="feedback-subject">There are two ways to import names from other modules</p>
+<pre><code>
+#Run and import all global variables
+#from a file called module1
+<strong class="pending">
+import module1
+</strong>
+
+#Import a specific variable
+#So as not to pollute the receiving namespace
+<strong class="pending">
+from module2 import variable1
+</strong>
+
+#variables can be functions, objects, etc
+#Everything in python is an object anyway
+</code></pre>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:07:41 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:07:41 PM</p>
+<p class="feedback-subject">Where will it look module1?</p>
+<div class="plist">
+<p>module1 can be seen as another python file with extension module1.py</p>
+<p>However you don't say the .py in the end</p>
+<p>You also don't say where that file is</p>
+<p>Few places it will look for are:</p>
+<p>a) Current path</p>
+<p>b) standard library (at python\Lib)</p>
+<p>c) Externally installed library through pip (python\Lib\site-packages)</p>
+<p>d) In places identified by environment variable "pythonpath"</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:08:17 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:08:17 PM</p>
+<p class="feedback-subject">There are over 200 standard libraries in python</p>
+<p>There are over 200 standard libraries in python</p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:08:32 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:08:32 PM</p>
+<p class="feedback-subject">Important python standard modules</p>
+<p class="question">Important python standard modules</p>
+<p><a href="http://www.google.com/search?hl=en&q=Important%20python%20standard%20modules">Search for:  Important python standard modules</a></p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:11:07 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:11:07 PM</p>
+<p class="feedback-subject">This is a nice introduction to useful libraries</p>
+<p><a href="https://python-textbok.readthedocs.io/en/1.0/Useful_Libraries.html">This is a nice introduction to useful libraries</a></p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:14:00 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:14:00 PM</p>
+<p class="feedback-subject">Some listed libraries are</p>
+<pre><code>
+Datetime
+math
+random
+re
+csv
+
+#command line scripting
+sys
+argparse
+</code></pre>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:20:26 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:20:26 PM</p>
+<p class="feedback-subject">.pyc and __pycache__ :compiling/caching</p>
+<div class="plist">
+<p>It creates .pyc file for .py files based on time stamps when .py changes</p>
+<p>It may create a sub directory called __pycache__ and put the .pyc files underneath</p>
+<p>This file contains bytecode</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:28:24 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:28:24 PM</p>
+<p class="feedback-subject">Module search path, one more time</p>
+<div class="plist">
+<p>1. programs current working directory/home directory</p>
+<p>2. PYTHONPATH  directories</p>
+<p>3. standard library directories</p>
+<p>4. contents of any .pth files (if present)</p>
+<p>5. The site-packages home of third party extensions</p>
+<p>6. All these directories end up as sys.path variable in the interpreter. you can print that to see the paths</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:29:19 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:29:19 PM</p>
+<p class="feedback-subject">Nature of site module</p>
+<div class="plist">
+<p>this is the standard module that describes how the module path is decided. So look for the package documentation for this library.</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:30:00 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:30:00 PM</p>
+<p class="feedback-subject">Here is the docs for "site" modules</p>
+<p><a href="https://docs.python.org/3.7/library/site.html">Here is the docs for "site" modules</a></p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:31:18 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:31:18 PM</p>
+<p class="feedback-subject">Lib/site-packages</p>
+<div class="plist">
+<p>Python automatically adds the site-packages sub directory of its standard library to the module search path. this is where pip installs python packages.</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:38:15 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:38:15 PM</p>
+<p class="feedback-subject">What does sys.path has?</p>
+<pre><code>
+#Do this
+import sys
+print (sys.path)
+
+#You will get this
+
+C:\\satya\\data\\code\\pyspark', 
+'c:\\satya\\i\\python374\\python37.zip', 
+'c:\\satya\\i\\python374\\DLLs', 
+'c:\\satya\\i\\python374\\lib', 
+'c:\\satya\\i\\python374', 
+'C:\\Users\\satya\\AppData\\Roaming\\Python\\Python37\\site-packages', 
+'c:\\satya\\i\\python374\\lib\\site-packages'
+</code></pre>
+
+<p>Not sure why there are two packages.
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:39:46 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:39:46 PM</p>
+<p class="feedback-subject">Interesting</p>
+<pre><code>
+#*******************
+#First version
+#*******************
+import sys
+print (sys.path)
+
+#*******************
+#Second version: wrong
+#Because sys.path is not a filename
+#Only sys is the file
+#*******************
+import sys.path
+print (path)
+
+#*******************
+#Third version
+# from file or module 'sys' import a variable "path"
+#*******************
+from sys import path
+print (path)
+</code></pre>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:44:46 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:44:46 PM</p>
+<p class="feedback-subject">For example when pip installs pyspark, it is located in</p>
+<pre><code>
+\Lib\site-packages\pyspark\*
+</code></pre>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:45:03 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:45:03 PM</p>
+<p class="feedback-subject">And it appears awfully close to the python under spark installation</p>
+<p>And it appears awfully close to the python under spark installation</p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:45:31 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:45:31 PM</p>
+<p class="feedback-subject">That means one may be able to write code without spark at all</p>
+<div class="plist">
+<p>.. and then just run it on azure. a thought.</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 1:47:50 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 1:47:50 PM</p>
+<p class="feedback-subject">This also answers another question</p>
+<div class="plist">
+<p>VSCode is using the pyspark that is  installed pip install and not the one that came with spark install</p>
+<p>So in other words, you HAVE TO install pip pyspark to get this intellisense</p>
+<p>There may be other benefits as well with pip install pyspark, but I haven't explored enough to know</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:06:38 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:06:38 PM</p>
+<p class="feedback-subject">Something more about modules and their names</p>
+<div class="plist">
+<p>An imported module in python code is actually a variable </p>
+<p>It is also the filename </p>
+<p>So filenames must follow variable naming conventions</p>
+<p>Modules written in C and other languages are called extension modules</p>
+</div>
+
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:09:37 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:09:37 PM</p>
+<p class="feedback-subject">Oh a key difference</p>
+<pre><code>
+#sys is a module
+#sys is a file
+import sys
+
+#notice the clarification of path
+
+#sys is module
+#sys is a file
+#sys.path is a variable of module sys
+print (sys.path)
+
+#When you do from
+from sys import path
+
+#the module variable "sys" is not
+#available. Only "path"is
+#because "from" keeps a local copy called "path"
+#pointing to sys.path
+</code></pre>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:09:57 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:09:57 PM</p>
+<p class="feedback-subject">That outlines the difference between import and from</p>
+<p>That outlines the difference between import and from</p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:11:11 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:11:11 PM</p>
+<p class="feedback-subject">You can also do this from module import *</p>
+<div class="plist">
+<p>from module1 import  *</p>
+<p>Now you don't have to say:</p>
+<p>module1.v1</p>
+<p>moudle1.v2</p>
+<p>but instead just use</p>
+<p>v1</p>
+<p>v2</p>
+</div>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:12:16 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:12:16 PM</p>
+<p class="feedback-subject">You can actually do both and use both ways to refer to the same variables</p>
+<p>You can actually do both and use both ways to refer to the same variables</p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:13:28 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:13:28 PM</p>
+<p class="feedback-subject">The exported names from a module are available in __dict__ list</p>
+<p>The exported names from a module are available in __dict__ list</p>
+</div>	 
+<!--
+**************************************************************
+* 9/16/2019, 2:18:42 PM - Comments by satya
+**************************************************************
+-->
+<div class="feedback-div">
+<p class="feedback-header">satya - 9/16/2019, 2:18:42 PM</p>
+<p class="feedback-subject">Now, if you want to know with out intellisense what pyspark packages are available</p>
+<div class="plist">
+<p>Look at this path in your python installation for pyspark module</p>
+<p>#Here you will sub modules of sql</p>
+<p class="pending">C:\satya\i\python374\Lib\site-packages\pyspark\sql</p>
+<p>#here your will sub module like RDD</p>
+<p class="pending">C:\satya\i\python374\Lib\site-packages\pyspark</p>
+</div>
+</div>	

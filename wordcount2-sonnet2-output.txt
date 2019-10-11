@@ -1,0 +1,787 @@
+
+C:\satya\data\code\pyspark>c:\satya\i\spark\bin\spark-submit --master local[4] wordcount2.py sonnet2.txt  
+*****************************
+*Raw lines
+*****************************
+When forty winters shall beseige thy brow,
+And dig deep trenches in thy beauty's field,
+Thy youth's proud livery, so gazed on now,
+Will be a tatter'd weed, of small worth held:
+Then being ask'd where all thy beauty lies,
+Where all the treasure of thy lusty days,
+To say, within thine own deep-sunken eyes,
+Were an all-eating shame and thriftless praise.
+How much more praise deserved thy beauty's use,
+If thou couldst answer 'This fair child of mine
+Shall sum my count and make my old excuse,'
+Proving his beauty by succession thine!
+This were to be new made when thou art old,
+And see thy blood warm when thou feel'st it cold.
+*****************************
+* End of Raw lines
+*****************************
+*****************************
+*Raw lines split into words. Each line is a list of words
+*****************************
+['When', 'forty', 'winters', 'shall', 'beseige', 'thy', 'brow,']
+['And', 'dig', 'deep', 'trenches', 'in', 'thy', "beauty's", 'field,']
+['Thy', "youth's", 'proud', 'livery,', 'so', 'gazed', 'on', 'now,']
+['Will', 'be', 'a', "tatter'd", 'weed,', 'of', 'small', 'worth', 'held:']
+['Then', 'being', "ask'd", 'where', 'all', 'thy', 'beauty', 'lies,']
+['Where', 'all', 'the', 'treasure', 'of', 'thy', 'lusty', 'days,']
+['To', 'say,', 'within', 'thine', 'own', 'deep-sunken', 'eyes,']
+['Were', 'an', 'all-eating', 'shame', 'and', 'thriftless', 'praise.']
+['How', 'much', 'more', 'praise', 'deserved', 'thy', "beauty's", 'use,']
+['If', 'thou', 'couldst', 'answer', "'This", 'fair', 'child', 'of', 'mine']
+['Shall', 'sum', 'my', 'count', 'and', 'make', 'my', 'old', "excuse,'"]
+['Proving', 'his', 'beauty', 'by', 'succession', 'thine!']
+['This', 'were', 'to', 'be', 'new', 'made', 'when', 'thou', 'art', 'old,']
+['And', 'see', 'thy', 'blood', 'warm', 'when', 'thou', "feel'st", 'it', 'cold.']
+*****************************
+* End of Raw lines split into words. Each line is a list of words
+*****************************
+*****************************
+*Just A List of Words, from flatmap
+*****************************
+when
+forty
+winters
+shall
+beseige
+thy
+brow,
+and
+dig
+deep
+trenches
+in
+thy
+beauty's
+field,
+thy
+youth's
+proud
+livery,
+so
+gazed
+on
+now,
+will
+be
+a
+tatter'd
+weed,
+of
+small
+worth
+held:
+then
+being
+ask'd
+where
+all
+thy
+beauty
+lies,
+where
+all
+the
+treasure
+of
+thy
+lusty
+days,
+to
+say,
+within
+thine
+own
+deep-sunken
+eyes,
+were
+an
+all-eating
+shame
+and
+thriftless
+praise.
+how
+much
+more
+praise
+deserved
+thy
+beauty's
+use,
+if
+thou
+couldst
+answer
+'this
+fair
+child
+of
+mine
+shall
+sum
+my
+count
+and
+make
+my
+old
+excuse,'
+proving
+his
+beauty
+by
+succession
+thine!
+this
+were
+to
+be
+new
+made
+when
+thou
+art
+old,
+and
+see
+thy
+blood
+warm
+when
+thou
+feel'st
+it
+cold.
+*****************************
+* End of Just A List of Words, from flatmap
+*****************************
+*****************************
+*List of Word Objects
+*****************************
+('when', 4, 1)
+('forty', 5, 1)
+('winters', 7, 1)
+('shall', 5, 1)
+('beseige', 7, 1)
+('thy', 3, 1)
+('brow,', 5, 1)
+('and', 3, 1)
+('dig', 3, 1)
+('deep', 4, 1)
+('trenches', 8, 1)
+('in', 2, 1)
+('thy', 3, 1)
+("beauty's", 8, 1)
+('field,', 6, 1)
+('thy', 3, 1)
+("youth's", 7, 1)
+('proud', 5, 1)
+('livery,', 7, 1)
+('so', 2, 1)
+('gazed', 5, 1)
+('on', 2, 1)
+('now,', 4, 1)
+('will', 4, 1)
+('be', 2, 1)
+('a', 1, 1)
+("tatter'd", 8, 1)
+('weed,', 5, 1)
+('of', 2, 1)
+('small', 5, 1)
+('worth', 5, 1)
+('held:', 5, 1)
+('then', 4, 1)
+('being', 5, 1)
+("ask'd", 5, 1)
+('where', 5, 1)
+('all', 3, 1)
+('thy', 3, 1)
+('beauty', 6, 1)
+('lies,', 5, 1)
+('where', 5, 1)
+('all', 3, 1)
+('the', 3, 1)
+('treasure', 8, 1)
+('of', 2, 1)
+('thy', 3, 1)
+('lusty', 5, 1)
+('days,', 5, 1)
+('to', 2, 1)
+('say,', 4, 1)
+('within', 6, 1)
+('thine', 5, 1)
+('own', 3, 1)
+('deep-sunken', 11, 1)
+('eyes,', 5, 1)
+('were', 4, 1)
+('an', 2, 1)
+('all-eating', 10, 1)
+('shame', 5, 1)
+('and', 3, 1)
+('thriftless', 10, 1)
+('praise.', 7, 1)
+('how', 3, 1)
+('much', 4, 1)
+('more', 4, 1)
+('praise', 6, 1)
+('deserved', 8, 1)
+('thy', 3, 1)
+("beauty's", 8, 1)
+('use,', 4, 1)
+('if', 2, 1)
+('thou', 4, 1)
+('couldst', 7, 1)
+('answer', 6, 1)
+("'this", 5, 1)
+('fair', 4, 1)
+('child', 5, 1)
+('of', 2, 1)
+('mine', 4, 1)
+('shall', 5, 1)
+('sum', 3, 1)
+('my', 2, 1)
+('count', 5, 1)
+('and', 3, 1)
+('make', 4, 1)
+('my', 2, 1)
+('old', 3, 1)
+("excuse,'", 8, 1)
+('proving', 7, 1)
+('his', 3, 1)
+('beauty', 6, 1)
+('by', 2, 1)
+('succession', 10, 1)
+('thine!', 6, 1)
+('this', 4, 1)
+('were', 4, 1)
+('to', 2, 1)
+('be', 2, 1)
+('new', 3, 1)
+('made', 4, 1)
+('when', 4, 1)
+('thou', 4, 1)
+('art', 3, 1)
+('old,', 4, 1)
+('and', 3, 1)
+('see', 3, 1)
+('thy', 3, 1)
+('blood', 5, 1)
+('warm', 4, 1)
+('when', 4, 1)
+('thou', 4, 1)
+("feel'st", 7, 1)
+('it', 2, 1)
+('cold.', 5, 1)
+*****************************
+* End of List of Word Objects
+*****************************
+*****************************
+*List of Word Objects 2, no length
+*****************************
+('when', 1)
+('forty', 1)
+('winters', 1)
+('shall', 1)
+('beseige', 1)
+('thy', 1)
+('brow,', 1)
+('and', 1)
+('dig', 1)
+('deep', 1)
+('trenches', 1)
+('in', 1)
+('thy', 1)
+("beauty's", 1)
+('field,', 1)
+('thy', 1)
+("youth's", 1)
+('proud', 1)
+('livery,', 1)
+('so', 1)
+('gazed', 1)
+('on', 1)
+('now,', 1)
+('will', 1)
+('be', 1)
+('a', 1)
+("tatter'd", 1)
+('weed,', 1)
+('of', 1)
+('small', 1)
+('worth', 1)
+('held:', 1)
+('then', 1)
+('being', 1)
+("ask'd", 1)
+('where', 1)
+('all', 1)
+('thy', 1)
+('beauty', 1)
+('lies,', 1)
+('where', 1)
+('all', 1)
+('the', 1)
+('treasure', 1)
+('of', 1)
+('thy', 1)
+('lusty', 1)
+('days,', 1)
+('to', 1)
+('say,', 1)
+('within', 1)
+('thine', 1)
+('own', 1)
+('deep-sunken', 1)
+('eyes,', 1)
+('were', 1)
+('an', 1)
+('all-eating', 1)
+('shame', 1)
+('and', 1)
+('thriftless', 1)
+('praise.', 1)
+('how', 1)
+('much', 1)
+('more', 1)
+('praise', 1)
+('deserved', 1)
+('thy', 1)
+("beauty's", 1)
+('use,', 1)
+('if', 1)
+('thou', 1)
+('couldst', 1)
+('answer', 1)
+("'this", 1)
+('fair', 1)
+('child', 1)
+('of', 1)
+('mine', 1)
+('shall', 1)
+('sum', 1)
+('my', 1)
+('count', 1)
+('and', 1)
+('make', 1)
+('my', 1)
+('old', 1)
+("excuse,'", 1)
+('proving', 1)
+('his', 1)
+('beauty', 1)
+('by', 1)
+('succession', 1)
+('thine!', 1)
+('this', 1)
+('were', 1)
+('to', 1)
+('be', 1)
+('new', 1)
+('made', 1)
+('when', 1)
+('thou', 1)
+('art', 1)
+('old,', 1)
+('and', 1)
+('see', 1)
+('thy', 1)
+('blood', 1)
+('warm', 1)
+('when', 1)
+('thou', 1)
+("feel'st", 1)
+('it', 1)
+('cold.', 1)
+*****************************
+* End of List of Word Objects 2, no length
+*****************************
+*****************************
+*List of Unique Word Objects 2, no length
+*****************************
+('when', 3)
+('forty', 1)
+('winters', 1)
+('shall', 2)
+('beseige', 1)
+('thy', 7)
+('brow,', 1)
+('and', 4)
+('dig', 1)
+('deep', 1)
+('trenches', 1)
+('in', 1)
+("beauty's", 2)
+('field,', 1)
+("youth's", 1)
+('proud', 1)
+('livery,', 1)
+('so', 1)
+('gazed', 1)
+('on', 1)
+('now,', 1)
+('will', 1)
+('be', 2)
+('a', 1)
+("tatter'd", 1)
+('weed,', 1)
+('of', 3)
+('small', 1)
+('worth', 1)
+('held:', 1)
+('then', 1)
+('being', 1)
+("ask'd", 1)
+('where', 2)
+('all', 2)
+('beauty', 2)
+('lies,', 1)
+('the', 1)
+('treasure', 1)
+('lusty', 1)
+('days,', 1)
+('to', 2)
+('say,', 1)
+('within', 1)
+('thine', 1)
+('own', 1)
+('deep-sunken', 1)
+('eyes,', 1)
+('were', 2)
+('an', 1)
+('all-eating', 1)
+('shame', 1)
+('thriftless', 1)
+('praise.', 1)
+('how', 1)
+('much', 1)
+('more', 1)
+('praise', 1)
+('deserved', 1)
+('use,', 1)
+('if', 1)
+('thou', 3)
+('couldst', 1)
+('answer', 1)
+("'this", 1)
+('fair', 1)
+('child', 1)
+('mine', 1)
+('sum', 1)
+('my', 2)
+('count', 1)
+('make', 1)
+('old', 1)
+("excuse,'", 1)
+('proving', 1)
+('his', 1)
+('by', 1)
+('succession', 1)
+('thine!', 1)
+('this', 1)
+('new', 1)
+('made', 1)
+('art', 1)
+('old,', 1)
+('see', 1)
+('blood', 1)
+('warm', 1)
+("feel'st", 1)
+('it', 1)
+('cold.', 1)
+*****************************
+* End of List of Unique Word Objects 2, no length
+*****************************
+Type of .map on an RDD is: <class 'pyspark.rdd.PipelinedRDD'>
+*****************************
+*List of Unique Word Objects 3, with length
+*****************************
+('when', 4, 3)
+('forty', 5, 1)
+('winters', 7, 1)
+('shall', 5, 2)
+('beseige', 7, 1)
+('thy', 3, 7)
+('brow,', 5, 1)
+('and', 3, 4)
+('dig', 3, 1)
+('deep', 4, 1)
+('trenches', 8, 1)
+('in', 2, 1)
+("beauty's", 8, 2)
+('field,', 6, 1)
+("youth's", 7, 1)
+('proud', 5, 1)
+('livery,', 7, 1)
+('so', 2, 1)
+('gazed', 5, 1)
+('on', 2, 1)
+('now,', 4, 1)
+('will', 4, 1)
+('be', 2, 2)
+('a', 1, 1)
+("tatter'd", 8, 1)
+('weed,', 5, 1)
+('of', 2, 3)
+('small', 5, 1)
+('worth', 5, 1)
+('held:', 5, 1)
+('then', 4, 1)
+('being', 5, 1)
+("ask'd", 5, 1)
+('where', 5, 2)
+('all', 3, 2)
+('beauty', 6, 2)
+('lies,', 5, 1)
+('the', 3, 1)
+('treasure', 8, 1)
+('lusty', 5, 1)
+('days,', 5, 1)
+('to', 2, 2)
+('say,', 4, 1)
+('within', 6, 1)
+('thine', 5, 1)
+('own', 3, 1)
+('deep-sunken', 11, 1)
+('eyes,', 5, 1)
+('were', 4, 2)
+('an', 2, 1)
+('all-eating', 10, 1)
+('shame', 5, 1)
+('thriftless', 10, 1)
+('praise.', 7, 1)
+('how', 3, 1)
+('much', 4, 1)
+('more', 4, 1)
+('praise', 6, 1)
+('deserved', 8, 1)
+('use,', 4, 1)
+('if', 2, 1)
+('thou', 4, 3)
+('couldst', 7, 1)
+('answer', 6, 1)
+("'this", 5, 1)
+('fair', 4, 1)
+('child', 5, 1)
+('mine', 4, 1)
+('sum', 3, 1)
+('my', 2, 2)
+('count', 5, 1)
+('make', 4, 1)
+('old', 3, 1)
+("excuse,'", 8, 1)
+('proving', 7, 1)
+('his', 3, 1)
+('by', 2, 1)
+('succession', 10, 1)
+('thine!', 6, 1)
+('this', 4, 1)
+('new', 3, 1)
+('made', 4, 1)
+('art', 3, 1)
+('old,', 4, 1)
+('see', 3, 1)
+('blood', 5, 1)
+('warm', 4, 1)
+("feel'st", 7, 1)
+('it', 2, 1)
+('cold.', 5, 1)
+*****************************
+* End of List of Unique Word Objects 3, with length
+*****************************
+*****************************
+*List of Unique Word Objects sorted by length
+*****************************
+('deep-sunken', 11, 1)
+('all-eating', 10, 1)
+('thriftless', 10, 1)
+('succession', 10, 1)
+('trenches', 8, 1)
+("beauty's", 8, 2)
+("tatter'd", 8, 1)
+('treasure', 8, 1)
+('deserved', 8, 1)
+("excuse,'", 8, 1)
+('winters', 7, 1)
+('beseige', 7, 1)
+("youth's", 7, 1)
+('livery,', 7, 1)
+('praise.', 7, 1)
+('couldst', 7, 1)
+('proving', 7, 1)
+("feel'st", 7, 1)
+('field,', 6, 1)
+('beauty', 6, 2)
+('within', 6, 1)
+('praise', 6, 1)
+('answer', 6, 1)
+('thine!', 6, 1)
+('forty', 5, 1)
+('shall', 5, 2)
+('brow,', 5, 1)
+('proud', 5, 1)
+('gazed', 5, 1)
+('weed,', 5, 1)
+('small', 5, 1)
+('worth', 5, 1)
+('held:', 5, 1)
+('being', 5, 1)
+("ask'd", 5, 1)
+('where', 5, 2)
+('lies,', 5, 1)
+('lusty', 5, 1)
+('days,', 5, 1)
+('thine', 5, 1)
+('eyes,', 5, 1)
+('shame', 5, 1)
+("'this", 5, 1)
+('child', 5, 1)
+('count', 5, 1)
+('blood', 5, 1)
+('cold.', 5, 1)
+('when', 4, 3)
+('deep', 4, 1)
+('now,', 4, 1)
+('will', 4, 1)
+('then', 4, 1)
+('say,', 4, 1)
+('were', 4, 2)
+('much', 4, 1)
+('more', 4, 1)
+('use,', 4, 1)
+('thou', 4, 3)
+('fair', 4, 1)
+('mine', 4, 1)
+('make', 4, 1)
+('this', 4, 1)
+('made', 4, 1)
+('old,', 4, 1)
+('warm', 4, 1)
+('thy', 3, 7)
+('and', 3, 4)
+('dig', 3, 1)
+('all', 3, 2)
+('the', 3, 1)
+('own', 3, 1)
+('how', 3, 1)
+('sum', 3, 1)
+('old', 3, 1)
+('his', 3, 1)
+('new', 3, 1)
+('art', 3, 1)
+('see', 3, 1)
+('in', 2, 1)
+('so', 2, 1)
+('on', 2, 1)
+('be', 2, 2)
+('of', 2, 3)
+('to', 2, 2)
+('an', 2, 1)
+('if', 2, 1)
+('my', 2, 2)
+('by', 2, 1)
+('it', 2, 1)
+('a', 1, 1)
+*****************************
+* End of List of Unique Word Objects sorted by length
+*****************************
+*****************************
+*List of Unique Word Objects sorted by frequency
+*****************************
+('thy', 3, 7)
+('and', 3, 4)
+('when', 4, 3)
+('of', 2, 3)
+('thou', 4, 3)
+('shall', 5, 2)
+("beauty's", 8, 2)
+('be', 2, 2)
+('where', 5, 2)
+('all', 3, 2)
+('beauty', 6, 2)
+('to', 2, 2)
+('were', 4, 2)
+('my', 2, 2)
+('forty', 5, 1)
+('winters', 7, 1)
+('beseige', 7, 1)
+('brow,', 5, 1)
+('dig', 3, 1)
+('deep', 4, 1)
+('trenches', 8, 1)
+('in', 2, 1)
+('field,', 6, 1)
+("youth's", 7, 1)
+('proud', 5, 1)
+('livery,', 7, 1)
+('so', 2, 1)
+('gazed', 5, 1)
+('on', 2, 1)
+('now,', 4, 1)
+('will', 4, 1)
+('a', 1, 1)
+("tatter'd", 8, 1)
+('weed,', 5, 1)
+('small', 5, 1)
+('worth', 5, 1)
+('held:', 5, 1)
+('then', 4, 1)
+('being', 5, 1)
+("ask'd", 5, 1)
+('lies,', 5, 1)
+('the', 3, 1)
+('treasure', 8, 1)
+('lusty', 5, 1)
+('days,', 5, 1)
+('say,', 4, 1)
+('within', 6, 1)
+('thine', 5, 1)
+('own', 3, 1)
+('deep-sunken', 11, 1)
+('eyes,', 5, 1)
+('an', 2, 1)
+('all-eating', 10, 1)
+('shame', 5, 1)
+('thriftless', 10, 1)
+('praise.', 7, 1)
+('how', 3, 1)
+('much', 4, 1)
+('more', 4, 1)
+('praise', 6, 1)
+('deserved', 8, 1)
+('use,', 4, 1)
+('if', 2, 1)
+('couldst', 7, 1)
+('answer', 6, 1)
+("'this", 5, 1)
+('fair', 4, 1)
+('child', 5, 1)
+('mine', 4, 1)
+('sum', 3, 1)
+('count', 5, 1)
+('make', 4, 1)
+('old', 3, 1)
+("excuse,'", 8, 1)
+('proving', 7, 1)
+('his', 3, 1)
+('by', 2, 1)
+('succession', 10, 1)
+('thine!', 6, 1)
+('this', 4, 1)
+('new', 3, 1)
+('made', 4, 1)
+('art', 3, 1)
+('old,', 4, 1)
+('see', 3, 1)
+('blood', 5, 1)
+('warm', 4, 1)
+("feel'st", 7, 1)
+('it', 2, 1)
+('cold.', 5, 1)
+*****************************
+* End of List of Unique Word Objects sorted by frequency
+*****************************

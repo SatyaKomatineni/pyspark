@@ -1,0 +1,48 @@
+
+<!--
+***************************************************
+* Key Python  Links
+***************************************************
+-->
+<div class="pagemenu1">
+<p class="header">Python</p>
+
+<p><a href="https://docs.python.org/3.7/library/index.html#library-index">Standard Library</a>
+</p>
+
+<p><a href="https://docs.python.org/3.7/library/functions.html">Functions</a>
+</p>
+
+<p><a href="https://docs.python.org/3.7/reference/index.html#reference-index">Language Reference</a>
+</p>
+
+<p><a href="https://www.w3schools.com/python/python_strings.asp">W3Schools</a>
+</p>
+
+</div>
+
+
+<!--
+***************************************************
+* Key Hadoop Links
+***************************************************
+-->
+<div class="pagemenu1">
+<p class="header">Hadoop</p>
+
+<p><a href="http://hadoop.apache.org/docs/stable/">Hadoop Home</a>
+</p>
+
+<p><a href="http://hadoop.apache.org/docs/stable/api/index.html">Hadoop API</a>
+</p>
+
+</div>
+
+<!--
+***************************************************
+* parent folder
+***************************************************
+-->
+<div class="akc_expand" type="folderWidget">
+        <folder_id>391</folder_id>
+</div>
