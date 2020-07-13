@@ -1,4 +1,5 @@
 @echo off
+@rem batch file to change directories to spark related directories
 
 if "%1" == "1" goto none
 
