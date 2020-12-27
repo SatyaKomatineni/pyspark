@@ -122,11 +122,17 @@ if __name__ == "__main__":
     #pyspark.rdd.RDD
     linesAsRDD = dfr.rdd
 
+    #***********************************
+    # Collect to be able to print etc
+    #***********************************
     #This becomes a list
     collectedRDDLines = linesAsRDD.collect()
     #python list of Row objects
     printType("CollectedRDDLines",collectedRDDLines)
 
+    #***********************************
+    # map an RDD: similar to select
+    #***********************************
     #pyspark.rdd.PipelinedRDD
     #These are a list of strings as opposed to collection of rows and columns
     #Need to understand what a PipelinedRDD is then
@@ -138,7 +144,13 @@ if __name__ == "__main__":
     #where value is the column on the row object
     mappedLinesRDD = linesAsRDD.map(lambda row: row.value)
 
+    #***********************************
+    # Break the lines into words: map, flatmap
+    #***********************************
     lineAsListOfWords = lines.map(lambda x: x.split(' ')) 
+    #pyspark.rdd.PipelinedRDD
+    printType("lineAsListOfWords",lineAsListOfWords)
+
     printCollected("Raw lines split into words. Each line is a list of words", \
         lineAsListOfWords)
 
